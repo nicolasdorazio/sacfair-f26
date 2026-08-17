@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Live Sheet + PDF</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; width: 100%; overflow: hidden; }
+  .container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+  }
+  .sheet-panel {
+    flex: 0 0 60%;
+    height: 100%;
+    border-right: 1px solid #ddd;
+  }
+  .pdf-panel {
+    flex: 0 0 40%;
+    height: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="sheet-panel">
+      <!--
+        Replace SRC below with the embed URL from:
+        Google Sheets > File > Share > Publish to web > Embed tab
+        It looks like:
+        https://docs.google.com/spreadsheets/d/e/XXXXXXX/pubhtml?widget=true&headers=false
+      -->
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQLsepAZOcNUoYgRPieiHkv0R2iW--vHPdQJnhBvQF50aWkbV-eqE8Q4ckoXevaVAd9o1jMp9QjBL9u/pubhtml?gid=1849065466&single=true&widget=true&headers=false"></iframe>
+    </div>
+    <div class="pdf-panel">
+      <!--
+        If PDF is on Google Drive, use the preview URL format:
+        https://drive.google.com/file/d/YOUR_FILE_ID/preview
+
+        If self-hosting the PDF alongside this HTML file, just use
+        its filename, e.g. "report.pdf"
+      -->
+      <iframe src="Activities_Fair_Layout_Fall_2026.pdf"></iframe>
+    </div>
+  </div>
+</body>
+</html>
